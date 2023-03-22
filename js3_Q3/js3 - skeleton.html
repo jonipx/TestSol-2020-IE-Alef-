@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="2019-20.NBA2K.Roster.js"></script>
+
+    <style type="text/css">
+        #container > p {
+            background-color: pink;
+        }
+
+        p {
+            background-color: #000;
+        }
+
+        .first .d1 {
+            background-color: #fff;
+        }
+
+        .first #d2.d1 {
+            background-color: yellow;
+        }
+
+        .first #d2 .d1 {
+            background-color: green;
+        }
+
+        .second > p {
+            background-color: red;
+        }
+
+        .second #d4 {
+            background-color: blue;
+        }
+    </style>
+
+
+    <script>
+        o1 = f1();
+
+        str = "";
+
+        for (k in o1) {
+            str += o1[k] + " " + k + " ";
+        }
+
+        alert(str);
+
+        function f1() {
+            let o = {};
+            o.name = "messi";
+            o.age = 31;
+            return o;
+        }
+
+
+    </script>
+
+</head>
+<body>
+    <div id="container">
+        <div class="first">
+            <p class="d1">
+                d1
+            </p>
+            <p class="d1" id="d2">
+                d2
+            </p>
+        </div>
+        <div class="second">
+            <p class="d1">
+                d3
+            </p>
+            <p id="d4">d4</p>
+        </div>
+        <p>d5</p>
+    </div>
+
+
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+﻿body
+{
+}
+
+#container {
+    width:900px;
+    margin:auto;
+}
+
+#header {
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    top:150px;
+    left:0px;
+}
+
+.text {
+    background-color: #a1def3;
+    font-size:30px;
+    text-align:center;
+    color:white;
+}
+
+#main {
+    height:500px;
+    width:100%;
+}
+
+#left {
+    float:left;
+    width: 40%;
+    height: 100%;
+}
+#table {
+    background-color: #3a9ccd;
+    width: 40%;
+    height: 100%;
+}
+td{
+    text-align:center;
+    color:white;
+    font-size:30px;
+}
+#right{
+    background-image: url("p1.png");
+    height:100%;
+    width:100%;
+    display: block;
+}
+
+#footer{
+
+}

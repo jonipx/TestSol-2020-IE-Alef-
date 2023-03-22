@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="2019-20.NBA2K.Roster.js"></script>
+
+    <style type="text/css">
+
+        #mvp {
+            height: 100px;
+        }
+        img{
+            height:100px;
+            width:60px;
+        }
+
+        select {
+            height: 40px;
+            font-size: 20px;
+        }
+    </style>
+
+
+    <script>
+        let x = [];
+        function init() {
+            
+            let colleges = new Set();
+
+            let div = document.getElementById("selectph");
+            let select = document.createElement("select");
+            select.setAttribute('onchange', "change1()");
+            colleges.add("select");
+            for (let i = 0; i < data.players.length; i++) {
+                if (data.players[i].college != undefined) {
+                    colleges.add(data.players[i].college);
+                }
+            }
+            div.appendChild(select);
+
+
+            for (college of colleges) {
+                let opt2 = document.createElement("option");
+                opt2.innerHTML = college; 
+                select.appendChild(opt2);
+                let players = [];
+                for (let i = 0; i < data.players.length; i++) {
+                    if (data.players[i].college == college) {
+                        players.push(data.players[i].name);
+                    }
+                }
+                //x[college] = players;
+                //console.log(x);
+
+                
+            }            
+        }
+
+        function change1()
+        {            
+            let selected = document.getElementsByTagName("select")[0].value;
+            let div = document.getElementById("selectph");
+            div.innerHTML += "<br> <br>";
+           // let p = document.createElement("p");   alternative solution
+            //div.appendChild(p);
+            for (let i = 0; i < data.players.length; i++) {
+                if (data.players[i].college == selected)
+                {
+                    let img = document.createElement("img");
+                    img.setAttribute('src', data.players[i].imgURL);                    
+                    div.appendChild(img);
+                }                           
+            }            
+        }
+    </script>
+
+</head>
+<body onload="init()">
+
+    <div id="selectph">
+        <img src="images/mvp.jpg" id="mvp" /> 
+    </div>
+
+
+</body>
+</html>
